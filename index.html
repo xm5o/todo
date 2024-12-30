@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Enhanced Todo List</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <div class="loading-tip" id="loadingTip"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Enhanced Todo List</h1>
+            <div class="controls">
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="ar">عربي</option>
+                    <!-- <option value="es">Español</option> -->
+                </select>
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <select id="sortBy">
+                    <option value="date">Date</option>
+                    <option value="priority">Priority</option>
+                    <option value="alphabetical">A-Z</option>
+                </select>
+            </div>
+        </div>
+
+        <input type="text" class="search-bar" id="searchInput" placeholder="Search tasks...">
+        
+        <div class="input-group">
+            <div class="input-container">
+                <input type="text" id="todoInput" placeholder="Task title">
+                <textarea id="todoDescription" placeholder="Task description (optional)"></textarea>
+                <input type="date" id="dueDate" class="due-date">
+            </div>
+            <button id="addBtn">Add/Update Task</button>
+        </div>
+
+        <div class="controls">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="overdue">Overdue</button>
+        </div>
+        
+        <div id="todoList"></div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span id="totalTasks">0</span>
+                <div id="totalLabel">Total</div>
+            </div>
+            <div class="stat-item">
+                <span id="completedTasks">0</span>
+                <div id="completedLabel">Completed</div>
+            </div>
+            <div class="stat-item">
+                <span id="pendingTasks">0</span>
+                <div id="pendingLabel">Pending</div>
+            </div>
+            <div class="stat-item">
+                <span id="overdueTasks">0</span>
+                <div id="overdueLabel">Overdue</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
